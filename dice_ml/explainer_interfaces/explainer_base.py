@@ -514,8 +514,7 @@ class ExplainerBase(ABC):
         """
         if desired_class_input == "opposite":
             if num_output_nodes == 2:
-                original_pred_1 = np.argmax(original_pred)
-                target_class = int(1 - original_pred_1)
+                target_class = int(1 - original_pred[0])
                 return target_class
             elif num_output_nodes > 2:
                 raise UserConfigValidationException(
