@@ -272,7 +272,7 @@ class DiceGenetic(ExplainerBase):
         self.x1 = query_instance
 
         # find the predicted value of query_instance
-        test_pred = self.predict_fn(query_instance)
+        test_pred = self.predict_fn(query_instance)[0]
         self.test_pred = test_pred
 
         desired_class = self.misc_init(stopping_threshold, desired_class, desired_range, test_pred)

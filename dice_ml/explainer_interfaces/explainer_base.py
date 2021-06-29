@@ -514,8 +514,7 @@ class ExplainerBase(ABC):
         """
         if desired_class_input == "opposite":
             if num_output_nodes == 2:
-                target_class = int(1 - original_pred[0])
-                return target_class
+                return int(1 - original_pred)
             elif num_output_nodes > 2:
                 raise UserConfigValidationException(
                     "Desired class cannot be opposite if the number of classes is more than 2.")
