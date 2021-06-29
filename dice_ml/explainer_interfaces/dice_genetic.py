@@ -408,7 +408,7 @@ class DiceGenetic(ExplainerBase):
                 if feat_name in features_to_vary:
                     if feat_name in self.data_interface.continuous_feature_names:
                         one_init[j] = np.random.uniform(self.feature_range[feat_name][0],
-                                                        self.feature_range[feat_name][0])
+                                                        self.feature_range[feat_name][1])
                     else:
                         one_init[j] = np.random.choice(self.feature_range[feat_name])
                 else:

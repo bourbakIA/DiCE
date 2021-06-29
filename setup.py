@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION_STR = "0.6.1-patch2"
+VERSION_STR = "0.6.1-patch3"
 
 with open("README.rst", "r") as fh:
     long_description = fh.read()
